@@ -274,10 +274,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/samsung/aidl/power-libperfmgr
 
-# Tethering
-PRODUCT_PACKAGES += \
-    TetheringConfigOverlay
-
 # Themed Icons
 PRODUCT_PACKAGES += \
     ThemedIconsOverlay
