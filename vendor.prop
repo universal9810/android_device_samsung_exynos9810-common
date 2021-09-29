@@ -42,6 +42,10 @@ debug.hwc.winupdate=1
 debug.renderengine.backend=skiaglthreaded
 renderthread.skia.reduceopstasksplitting=true
 
+## SoC
+ro.soc.manufacturer=Samsung
+ro.soc.model "Exynos 9810"
+
 ### SURFACEFLINGER
 # Disable backpressure propagation
 debug.sf.latch_unsignaled=1
