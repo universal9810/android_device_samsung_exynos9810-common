@@ -68,8 +68,7 @@ TARGET_BOOTANIMATION_HALF_RES := true
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.5-service \
-    Snap
+    android.hardware.camera.provider@2.5-service
 
 # ConfigStore
 PRODUCT_PACKAGES += \
