@@ -56,7 +56,6 @@ ro.soc.model "Exynos 9810"
 # Disable backpressure propagation
 debug.sf.latch_unsignaled=1
 debug.sf.recomputecrop=0
-ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.use_content_detection_for_refresh_rate=false
 
 # Enable wide gamut and color management
