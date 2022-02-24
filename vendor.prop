@@ -38,6 +38,9 @@ vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 debug.slsi_platform=1
 debug.hwc.winupdate=1
 
+### SKIA
+debug.renderengine.backend=skiaglthreaded
+
 ### SURFACEFLINGER
 # Disable backpressure propagation
 debug.sf.latch_unsignaled=1
