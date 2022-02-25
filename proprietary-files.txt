@@ -38,6 +38,9 @@ vendor/firmware/cs47l92-dsp1-trace.wmfw
 vendor/firmware/dsm.bin
 vendor/firmware/vts.bin
 
+# Bluetooth
+-vendor/lib64/libbt-vendor.so;MODULE=libbt-vendor.exynos9810
+
 # Biometrics
 -vendor/lib/libbauthserver.so
 -vendor/lib/libbauthtzcommon.so
