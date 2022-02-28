@@ -65,7 +65,7 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5-service \
-    Snap
+    CameraGo
 
 # ConfigStore
 PRODUCT_PACKAGES += \
@@ -269,6 +269,10 @@ PRODUCT_SOONG_NAMESPACES += \
 # Tethering
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay
+
+# Themed Icons
+PRODUCT_PACKAGES += \
+    ThemedIconsOverlay
 
 # Thermal
 PRODUCT_PACKAGES += \
