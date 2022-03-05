@@ -9,3 +9,14 @@ sys.mobicoredaemon.enable      u:object_r:tee_prop:s0
 
 # FASTBOOTD
 ro.fastbootd.available         u:object_r:exported_default_prop:s0
+
+# RIL
+persist.ril.esim.slotswitch    u:object_r:vendor_radio_prop:s0
+persist.sys.softsim.status     u:object_r:vendor_radio_prop:s0
+persist.sys.sec_feature        u:object_r:vendor_radio_prop:s0
+persist.sys.sec_feature2       u:object_r:vendor_radio_prop:s0
+persist.sys.sec_pcid           u:object_r:vendor_radio_prop:s0
+ro.multisim.default_network    u:object_r:vendor_radio_prop:s0
+persist.ril.interfaceconf.failed    u:object_r:vendor_radio_prop:s0
+ro.multisim.simslotcount       u:object_r:vendor_radio_prop:s0
+persist.radio.multisim.config  u:object_r:vendor_radio_prop:s0
