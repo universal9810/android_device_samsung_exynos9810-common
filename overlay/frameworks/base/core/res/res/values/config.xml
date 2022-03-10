@@ -980,4 +980,8 @@
 
     <!-- Enable system navigation keys. -->
     <bool name="config_supportSystemNavigationKeys">true</bool>
+
+    <!-- Set lowmemorykiller threshold -->
+    <integer name="config_lowMemoryKillerMinFreeKbytesAbsolute">131072</integer>
+    <integer name="config_lowMemoryKillerMinFreeKbytesAdjust">0</integer>
 </resources>
