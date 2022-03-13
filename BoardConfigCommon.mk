@@ -134,3 +134,11 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WIFI_AVOID_IFACE_RESET_MAC_CHANGE := true
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/dhd/parameters/firmware_path"
+
+# ADB on boot
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.service.adb.enable=1 \
+    persist.service.debuggable=1 \
+    persist.sys.usb.config=mtp,adb \
+    ro.debuggable=1 \
+    ro.adb.secure=0
