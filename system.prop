@@ -19,6 +19,9 @@ ro.iorapd.enable=true
 # Pre-Rendering
 ro.vendor.perf.scroll_opt=true
 
+# IORap
+ro.iorapd.enable=true
+
 # RIL
 persist.sys.fflag.override.settings_provider_model=false
 
