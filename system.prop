@@ -10,6 +10,9 @@ ro.cmc.version=2.0
 ### System
 persist.sys.binary_xml=false
 
+# VSync
+debug.cpurend.vsync=false
+
 # IORap
 ro.iorapd.enable=true
 
