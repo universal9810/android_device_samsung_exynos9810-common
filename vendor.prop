@@ -59,3 +59,8 @@ ro.surface_flinger.use_color_management=true
 ### DEVELOPER SETTINGS
 # Disable invocation of oem_lock
 ro.frp.pst=/dev/block/persistent
+
+## ZRAM
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=1440
+ro.zram.periodic_wb_delay_hours=24
