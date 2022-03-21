@@ -24,6 +24,9 @@ persist.sys.sf.native_mode=2
 ro.hardware.egl=mali
 ro.hardware.vulkan=mali
 
+### VULKAN
+debug.hwui.renderer=skiavk
+
 ### KEYSTORE
 ro.hardware.keystore=mdfpp
 
