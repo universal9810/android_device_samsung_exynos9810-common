@@ -142,9 +142,9 @@ vendor/etc/dolby/dax-default.xml
 -vendor/lib/hw/gatekeeper.exynos9810.so
 -vendor/lib64/hw/gatekeeper.exynos9810.so
 
-# Gralloc
--vendor/lib/hw/gralloc.exynos9810.so
--vendor/lib64/hw/gralloc.exynos9810.so
+# Gralloc - N770FXXS7DUB1
+-vendor/lib/hw/gralloc.exynos9810.so|652a81c3d1adaebb931f0880887d4602906f138a
+-vendor/lib64/hw/gralloc.exynos9810.so|3e9de01ab93009e8cb6cc823271df1fe295a89d9
 
 # GPS/GNSS
 -vendor/bin/hw/gpsd
@@ -286,25 +286,27 @@ vendor/openvx/cost/cost_iva.dat
 vendor/openvx/cost/cost_score.dat
 vendor/openvx/xml/_hifi_still_schedule.xml
 
-# Samsung SLSI HWC
--vendor/lib/hw/hwcomposer.exynos9810.so
--vendor/lib/libExynosHWCService.so
--vendor/lib/libGrallocWrapper.so
+# Samsung SLSI HWC - N770FXXS7DUB1
+-vendor/lib/hw/hwcomposer.exynos9810.so|0fe6fcda72e549f0afb04863cbdf35420b71d914
+-vendor/lib/libExynosHWCService.so|96d7441a96ff38544a136ab34db0df5bb6288bb7
+-vendor/lib/libGrallocWrapper.so|4eff4bbab8c50d0279d8d9145c6973857a16ce0e
 -vendor/lib/libacryl.so
--vendor/lib/libexynosdisplay.so
--vendor/lib/libexynosgscaler.so
--vendor/lib/libexynosscaler.so
--vendor/lib/libexynosutils.so
--vendor/lib/libexynosv4l2.so
--vendor/lib64/hw/hwcomposer.exynos9810.so
--vendor/lib64/libExynosHWCService.so
--vendor/lib64/libGrallocWrapper.so
+-vendor/lib/libexynosdisplay.so|919a3989090ab4e090b3084d50a0d36dfff98f0c
+-vendor/lib/libexynosgscaler.so|a90fdc07682c3e8d59a28859a72dc0e24d6b65d1
+-vendor/lib/libexynosgraphicbuffer.so|db2af12c89805cb8a464ea17f458ead467a54cfa
+-vendor/lib/libexynosscaler.so|93b2cc9c87f00eb84f06d1ee06e8ef67a50b5772
+-vendor/lib/libexynosutils.so|a90530792e1770ece7fa44f93e93718b793e684e
+-vendor/lib/libexynosv4l2.so|ca5ed48c1a47fbc67e75fa0ef441b96d206722b9
+-vendor/lib64/hw/hwcomposer.exynos9810.so|95c32a020b05e60c72e2238d09bc0f021372b206
+-vendor/lib64/libExynosHWCService.so|fd8b4a099ae085e2e29e5fa1ef8a23defd33e0b0
+-vendor/lib64/libGrallocWrapper.so|b7480755d93b67919973f2b06b66a272127149b6
 -vendor/lib64/libacryl.so
--vendor/lib64/libexynosdisplay.so
--vendor/lib64/libexynosgscaler.so
--vendor/lib64/libexynosscaler.so
--vendor/lib64/libexynosutils.so
--vendor/lib64/libexynosv4l2.so
+-vendor/lib64/libexynosdisplay.so|b2a8a4f8eff5c321f3fc469b47895e5b540256c2
+-vendor/lib64/libexynosgscaler.so|b68da39cc697a37a96b019d5012f7d0f10e28295
+-vendor/lib64/libexynosgraphicbuffer.so|73c6fc698f68210ac285596760e4a01f68833d88
+-vendor/lib64/libexynosscaler.so|efe530650d069f46e34a6caedb23f16207d4cf55
+-vendor/lib64/libexynosutils.so|cfb9dc478b05c5b31964d702ce17d97765537a2c
+-vendor/lib64/libexynosv4l2.so|5f4f040e5ebd8a28914f55e70484657fcab89e2f
 -vendor/lib64/libmpp.so
 
 # Samsung SLSI Memtrack
