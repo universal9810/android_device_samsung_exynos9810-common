@@ -287,6 +287,7 @@ vendor/openvx/cost/cost_score.dat
 vendor/openvx/xml/_hifi_still_schedule.xml
 
 # Samsung SLSI HWC
+-vendor/bin/hw/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service|92f4095b7336132e8f01be72f783f368b9b6a781
 -vendor/lib/hw/hwcomposer.exynos9810.so|0fe6fcda72e549f0afb04863cbdf35420b71d914
 -vendor/lib/libExynosHWCService.so|96d7441a96ff38544a136ab34db0df5bb6288bb7
 -vendor/lib/libGrallocWrapper.so|4eff4bbab8c50d0279d8d9145c6973857a16ce0e
