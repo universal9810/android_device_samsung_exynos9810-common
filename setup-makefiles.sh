@@ -46,3 +46,9 @@ if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
     # Finish
     write_footers
 fi
+
+# Keystore patch
+echo "Applying Keystore patch";
+cd system/security;
+git apply ../../device/samsung/exynos9810-common/patches/Keystore.patch;
+cd -
