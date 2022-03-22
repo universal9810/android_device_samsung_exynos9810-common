@@ -285,7 +285,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.3-service.samsung
+    android.hardware.usb@1.1-service.typec
 
 # Soundtrigger
 PRODUCT_PACKAGES += \
