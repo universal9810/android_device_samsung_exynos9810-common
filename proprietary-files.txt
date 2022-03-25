@@ -287,6 +287,8 @@ vendor/openvx/cost/cost_score.dat
 vendor/openvx/xml/_hifi_still_schedule.xml
 
 # Samsung SLSI HWC - N770FXXS7DUB1
+-vendor/bin/hw/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service
+vendor/etc/init/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service.rc
 -vendor/lib/hw/hwcomposer.exynos9810.so|0fe6fcda72e549f0afb04863cbdf35420b71d914
 -vendor/lib/libExynosHWCService.so|96d7441a96ff38544a136ab34db0df5bb6288bb7
 -vendor/lib/libGrallocWrapper.so|4eff4bbab8c50d0279d8d9145c6973857a16ce0e
@@ -308,6 +310,7 @@ vendor/openvx/xml/_hifi_still_schedule.xml
 -vendor/lib64/libexynosutils.so|cfb9dc478b05c5b31964d702ce17d97765537a2c
 -vendor/lib64/libexynosv4l2.so|5f4f040e5ebd8a28914f55e70484657fcab89e2f
 -vendor/lib64/libmpp.so
+-vendor/lib64/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
 
 # Samsung SLSI Memtrack
 -vendor/lib64/hw/memtrack.exynos9810.so
