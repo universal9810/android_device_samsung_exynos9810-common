@@ -129,18 +129,18 @@ vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_performance.xml
 vendor/etc/media_profiles_V1_0.xml
 
-# Dolby
-vendor/etc/dolby/dax-default.xml
--vendor/lib/libprofileparamstorage.so
--vendor/lib/libsecaudiocoreutils.so
--vendor/lib/soundfx/libswdap.so
--vendor/lib64/libprofileparamstorage.so
--vendor/lib64/libsecaudiocoreutils.so
--vendor/lib64/soundfx/libswdap.so
+# Dolby - N770FXXU8FVB4
+vendor/etc/dolby/dax-default.xml|9b7acde2618800a17f2cfd706cd1d9106f62a2fa
+-vendor/lib/libprofileparamstorage.so|06ecdf86a4252425c0b984eb9e052b54ee3fcfcc
+-vendor/lib/libsecaudiocoreutils.so|d3aac30a1599a8ba3a21d9567e82c2fc8c945c61
+-vendor/lib/soundfx/libswdap.so|e4ccefed2e42c8f9b485ebcf2fce1f8d70ceb060
+-vendor/lib64/libprofileparamstorage.so|5591dc09c6127c0e2820fc31514be36bcc980b67
+-vendor/lib64/libsecaudiocoreutils.so|1a98a5383de4b8d8e9cdf1106cb92c4e4873c017
+-vendor/lib64/soundfx/libswdap.so|37fad1df6226a245f8bac4e8aa73a8111d3cb5e7
 
-# Gatekeeper
--vendor/lib/hw/gatekeeper.exynos9810.so
--vendor/lib64/hw/gatekeeper.exynos9810.so
+# Gatekeeper - N770FXXU8FVB4
+-vendor/lib/hw/gatekeeper.exynos9810.so|b96272f30ad1892f2ae9366574f4058a7ca59c00
+-vendor/lib64/hw/gatekeeper.exynos9810.so|16ebf6180bfd35aa8c3ef31e2349f4a85f95a21b
 
 # Gralloc - N770FXXS7DUB1
 -vendor/lib/hw/gralloc.exynos9810.so|652a81c3d1adaebb931f0880887d4602906f138a
@@ -160,22 +160,22 @@ vendor/etc/sensor/lhd.conf
 -vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl.so
 -vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 
-# Graphics/Mali
+# Graphics/Mali - N770FXXU8FVB4
 -vendor/etc/snap_gpu_kernel_64.bin|312f56def4e6768b954011e7b41ed3e79dd61fc3
--vendor/bin/bcc_mali
+-vendor/bin/bcc_mali|64acb6aab1ece21ffcebc6f3de82485734bb0b7b
 -vendor/lib/egl/libGLES_mali.so|8934ddf7e9ea79445dfd89e72e521263adf70ca4
 -vendor/lib/hw/vulkan.mali.so|0b3a2e1e760d8ab9d9b745a5a88ad5c6f272f00a
-vendor/lib/libmalicore.bc
+vendor/lib/libmalicore.bc|940eda48421e892ea964ba046db832580f79886c
 -vendor/lib64/egl/libGLES_mali.so|6788f5cf4fabb45c51c2c66b6ab4d28b3f94a8ef
--vendor/lib64/libLLVM_android_mali.so
--vendor/lib64/libbcc_mali.so
+-vendor/lib64/libLLVM_android_mali.so|4eb270c19fc66bd255d070e6aef69a28c99ae44c
+-vendor/lib64/libbcc_mali.so|d62a7b0168d06bed3a1aaf1b80e50417cc92ba76
 -vendor/lib64/hw/vulkan.mali.so|cb2998e41de503bb156791a0698510599cabc2da
-vendor/lib64/libmalicore.bc
+vendor/lib64/libmalicore.bc|29e2b4cde4d451ed735b473f584dfed85231dd94
 -vendor/lib64/libgpudataproducer.so|89e0d2aa05d2fc47822a980e5946840ec66e9597
 
-# Ion
--vendor/lib/libion_exynos.so
--vendor/lib64/libion_exynos.so
+# Ion - N770FXXU8FVB4
+-vendor/lib/libion_exynos.so|d9e8ef48d4b97d3f1c3dcf11030794be9410d4db
+-vendor/lib64/libion_exynos.so|ac1e7a62e6c544e71abf8c9c9721f7f54366714f
 
 # Keymaster
 -vendor/lib64/hw/keystore.mdfpp.so
@@ -313,8 +313,8 @@ vendor/etc/init/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service.rc
 -vendor/lib64/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
 
 # Samsung SLSI Memtrack
--vendor/lib64/hw/memtrack.exynos9810.so
--vendor/lib/hw/memtrack.exynos9810.so
+-vendor/lib64/hw/memtrack.exynos9810.so|6046b4d605f4217ad8aff2a5e59bb59ed0ffb74a
+-vendor/lib/hw/memtrack.exynos9810.so|4bbcaa09687a5168d06c0b10ce12aae6bf291052
 
 # Secnative
 -vendor/lib/libsecnativefeature.so
@@ -329,8 +329,8 @@ vendor/etc/sensors/hals.conf
 -vendor/lib64/sensors.grip.so
 
 # Thermal
-vendor/lib/hw/thermal.exynos9810.so
-vendor/lib64/hw/thermal.exynos9810.so
+vendor/lib/hw/thermal.exynos9810.so|e68d596bd8f5fbbd5fc9bbde81be1c6be25f7a1c
+vendor/lib64/hw/thermal.exynos9810.so|dde28f5153dbd0ae1d1ed53a4e046c697b729962
 
 # Widevine
 -vendor/bin/hw/android.hardware.drm@1.2-service.widevine
