@@ -165,7 +165,7 @@ on init
     chown system radio /sys/class/sensors/ssp_sensor/thermistor_channel_0
     chown system radio /sys/class/sensors/ssp_sensor/thermistor_channel_1
     chown system radio /sys/class/sensors/ssp_sensor/bcm_minidump
-	chown system radio /sys/class/sensors/ssp_sensor/reset_info
+    chown system radio /sys/class/sensors/ssp_sensor/reset_info
     chown root system /sys/class/sec/sensorhub/mcu_power
 
 # Sensorhub IIO
@@ -206,6 +206,11 @@ on init
 # Thermistor
     chown system radio /sys/class/sensors/thermistor_sensor/threshold_up
     chown system radio /sys/class/sensors/thermistor_sensor/threshold_sub
+
+# Permissions for LCD HMT
+    chown system system /sys/class/lcd/panel/hmt_on
+    chown system system /sys/class/lcd/panel/hmt_bright
+    chown system system /sys/class/mdnie/mdnie/hmt_color_temperature
 
 # DATA_INJECTION
     chown system radio /sys/class/sensors/ssp_sensor/data_injection_enable
@@ -251,7 +256,7 @@ on init
     chmod 0664 /sys/kernel/ert/switch_rt_load_ratio
     write /sys/kernel/ert/rt_ratio_for_freq 0
 
-	# Group Balancer
+    # Group Balancer
     chown system system /dev/stune/top-app/schedtune.gb_interval_us
     chown system system /dev/stune/top-app/schedtune.gb_window_ms
     chown system system /dev/stune/top-app/schedtune.gb_threshold
@@ -510,10 +515,6 @@ on post-fs-data
     chmod 0644 /dev/freezer/olaf/cgroup.procs
     chmod 0644 /dev/freezer/olaf/freezer.state
 
-# MST/NFC Switch
-    chown system system /dev/mst_ctrl
-    chmod 0660 /dev/mst_ctrl
-
 # Permision for xlat control
     chmod 0660 /sys/kernel/clat/xlat_plat
     chown clat clat /sys/kernel/clat/xlat_plat
@@ -521,10 +522,10 @@ on post-fs-data
     chown clat clat /sys/kernel/clat/xlat_addrs
     chmod 0660 /sys/kernel/clat/xlat_v4_addrs
     chown clat clat /sys/kernel/clat/xlat_v4_addrs
-  
+
 on boot
-# SSWAP
-    write /proc/sys/vm/swappiness 100
+    write /proc/sys/vm/page-cluster 0
+    write /proc/sys/vm/swappiness 160
 
     # Allow to access debugfs for system:system
     chmod 0755 /sys/kernel/debug
@@ -854,8 +855,6 @@ on fs
     mount none /mnt/vendor/efs /efs bind
     mount none /mnt/vendor/cpefs /cpefs bind
 
-    setprop ro.crypto.fuse_sdcard true
-
     restorecon_recursive /mnt/vendor/efs
     restorecon_recursive /mnt/vendor/cpefs
     restorecon_recursive /mnt/vendor/persist
@@ -886,90 +885,82 @@ on fs
     chown system system /sys/class/ion_cma/ion_video_ext/isolated
 
 # Permissions for backlight
-	chown system system /sys/class/backlight/panel/brightness
-	chown system system /sys/class/backlight/panel/weakness_ccb
-
-# Permissions for LCD HMT
-	chown system system /sys/class/lcd/panel/hmt_on
-	chown system system /sys/class/lcd/panel/hmt_bright
-	chown system system /sys/class/mdnie/mdnie/hmt_color_temperature
+    chown system system /sys/class/backlight/panel/brightness
+    chown system system /sys/class/backlight/panel/weakness_ccb
 
 # Permissions for LCD ALPM
-	chown system system /sys/class/lcd/panel/alpm
+    chown system system /sys/class/lcd/panel/alpm
 
 # Permissions for LCD
-	chown system radio /sys/class/lcd/panel/manufacture_code
-	chown system radio /sys/class/lcd/panel/lcd_type
-	chown system system /sys/class/lcd/panel/siop_enable
-	chown system system /sys/class/lcd/panel/temperature
-	chown system radio /sys/class/lcd/panel/mcd_mode
-	chown system system /sys/class/lcd/panel/lux
-	chown system media_rw /sys/class/lcd/panel/adaptive_control
-	chown system system /sys/class/lcd/panel/SVC_OCTA
-	chown system system /sys/class/lcd/panel/xtalk_mode
-	chown system system /sys/class/lcd/panel/mst
-	chown system system /sys/class/lcd/panel/poc
-	chown system system /sys/class/lcd/panel/poc_mca
-	chown system system /sys/class/lcd/panel/gct
-	chown system system /sys/class/lcd/panel/grayspot
-	chown system system /sys/class/lcd/panel/irc_mode
-	chown system system /sys/class/lcd/panel/isc_defect
+    chown system radio /sys/class/lcd/panel/manufacture_code
+    chown system radio /sys/class/lcd/panel/lcd_type
+    chown system system /sys/class/lcd/panel/siop_enable
+    chown system system /sys/class/lcd/panel/temperature
+    chown system radio /sys/class/lcd/panel/mcd_mode
+    chown system system /sys/class/lcd/panel/lux
+    chown system media_rw /sys/class/lcd/panel/adaptive_control
+    chown system system /sys/class/lcd/panel/SVC_OCTA
+    chown system system /sys/class/lcd/panel/xtalk_mode
+    chown system system /sys/class/lcd/panel/mst
+    chown system system /sys/class/lcd/panel/poc
+    chown system system /sys/class/lcd/panel/poc_mca
+    chown system system /sys/class/lcd/panel/gct
+    chown system system /sys/class/lcd/panel/grayspot
+    chown system system /sys/class/lcd/panel/irc_mode
+    chown system system /sys/class/lcd/panel/isc_defect
 
 # Permissions for LCD COPR
-	chown system system /sys/class/lcd/panel/copr
-	chown system system /sys/class/lcd/panel/read_copr
+    chown system system /sys/class/lcd/panel/copr
+    chown system system /sys/class/lcd/panel/read_copr
 
 # Permissions for AFC
-	chown system system /sys/class/lcd/panel/copr_roi
-	chown system system /sys/class/lcd/panel/brt_avg
-	chown system system /sys/class/mdnie/mdnie/afc
+    chown system system /sys/class/lcd/panel/copr_roi
+    chown system system /sys/class/lcd/panel/brt_avg
+    chown system system /sys/class/mdnie/mdnie/afc
 
-	mkdir /efs/afc 0700 system system
-	chmod 700 /efs/afc
+    mkdir /efs/afc 0700 system system
+    chmod 700 /efs/afc
 
 # Permissions for LCD SELF MASK
-	chown system system /sys/class/lcd/panel/self_mask
+    chown system system /sys/class/lcd/panel/self_mask
 
 # Permissions for LCD SELF MOVE
-	chown system system /sys/class/lcd/panel/self_move
+    chown system system /sys/class/lcd/panel/self_move
 
 # Permissions for LCD DPUI
-	chown system system /sys/class/lcd/panel/dpui
-	chown system system /sys/class/lcd/panel/dpui_dbg
-	chown system system /sys/class/lcd/panel/dpci
-	chown system system /sys/class/lcd/panel/dpci_dbg
+    chown system system /sys/class/lcd/panel/dpui
+    chown system system /sys/class/lcd/panel/dpui_dbg
+    chown system system /sys/class/lcd/panel/dpci
+    chown system system /sys/class/lcd/panel/dpci_dbg
 
 # Permissions for PANEL POC
-	chmod 0660 /dev/poc
-	chown system system /dev/poc
+    chmod 0660 /dev/poc
+    chown system system /dev/poc
 
 # Permissions for self_display
-	chmod 0660 /dev/self_display
-	chown system system /dev/self_display
+    chmod 0660 /dev/self_display
+    chown system system /dev/self_display
 
 # permissions for BCDS systrace
-	chmod 0666 /sys/class/lcd/panel/fingerprint
-	chown system media_rw /sys/class/lcd/panel/fingerprint
+    chmod 0666 /sys/class/lcd/panel/fingerprint
+    chown system media_rw /sys/class/lcd/panel/fingerprint
 
 # Permissions for MDNIE
-	chown system media_rw /sys/class/mdnie/mdnie/bypass
-	chown system media_rw /sys/class/mdnie/mdnie/mode
-	chown system media_rw /sys/class/mdnie/mdnie/scenario
-	chown system system /sys/class/mdnie/mdnie/accessibility
-	chown system system /sys/class/mdnie/mdnie/sensorRGB
-	chown system system /sys/class/mdnie/mdnie/mdnie_ldu
-	chown system system /sys/class/mdnie/mdnie/hdr
-	chown system system /sys/module/hdr_tunables/parameters/tm_override_enable
-	chown system system /sys/module/hdr_tunables/parameters/tm_lut_x
-	chown system system /sys/module/hdr_tunables/parameters/tm_lut_y
-	chown system system /sys/class/mdnie/mdnie/night_mode
-	chown system system /sys/class/mdnie/mdnie/color_lens
-	chown system system /sys/class/mdnie/mdnie/whiteRGB
-	chown system system /sys/class/mdnie/mdnie/light_notification
-
-    # ISunlightEnhancement
+    chown system media_rw /sys/class/mdnie/mdnie/bypass
+    chown system media_rw /sys/class/mdnie/mdnie/mode
+    chown system media_rw /sys/class/mdnie/mdnie/scenario
+    chown system system /sys/class/mdnie/mdnie/accessibility
+    chown system system /sys/class/mdnie/mdnie/sensorRGB
+    chown system system /sys/class/mdnie/mdnie/mdnie_ldu
+    chown system system /sys/class/mdnie/mdnie/hdr
+    chown system system /sys/module/hdr_tunables/parameters/tm_override_enable
+    chown system system /sys/module/hdr_tunables/parameters/tm_lut_x
+    chown system system /sys/module/hdr_tunables/parameters/tm_lut_y
+    chown system system /sys/class/mdnie/mdnie/night_mode
+    chown system system /sys/class/mdnie/mdnie/color_lens
+    chown system system /sys/class/mdnie/mdnie/whiteRGB
+    chown system system /sys/class/mdnie/mdnie/light_notification
     chown system system /sys/class/mdnie/mdnie/lux
-    chmod 0644 /sys/class/mdnie/mdnie/lux
 
 # Permissions for System LSI NFC
 # NFC : Permissions for NFC
@@ -995,12 +986,6 @@ on fs
 # DP DRM
     chmod 0660 /sys/class/dp_sec/dp_drm
     chown system system /sys/class/dp_sec/dp_drm
-
-# Copy DRM Key
-#    copy /system/app/wv.keys /factory/wv.keys
-
-# Permission for DRM Key
-#    chmod 0644 /factory/wv.keys
 
 # SVC LED
     chown system system /sys/class/sec/led/led_r
@@ -1031,44 +1016,10 @@ on fs
 # ARGOSD network_throughput
     chown system system /dev/network_throughput
 
-# ARGOSD
-service argos-daemon /vendor/bin/argosd
-    class main
-    user system
-    group system radio
-
-service fuse_sdcard /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard /storage/sdcard
-    class late_start
-    disabled
-service fuse_usb1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usb1 /storage/usb1
-    class late_start
-    disabled
-service fuse_usb2 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usb2 /storage/usb2
-    class late_start
-    disabled
-
 service abox /vendor/bin/main_abox 17c50000.abox /data/vendor/log/abox
     class late_start
     user audioserver
     group system
-
-# ICD
-service prepare_param /system/bin/prepare_param.sh /dev/block/platform/11120000.ufs/by-name/PARAM
-    class core
-    user root
-    group root
-    seclabel u:r:prepare_param:s0
-    oneshot
-
-# Set watchdog timer to 40 seconds and pet it every 10 seconds to get a 30 second margin
-service watchdogd  /system/bin/watchdogd 10 30
-    class core
-    seclabel u:r:watchdogd:s0
-
-# on userdebug and eng builds, enable kgdb on the serial console
-on property:ro.debuggable=1
-    write /sys/module/kgdboc/parameters/kgdboc ttyFIQ1
-    write /sys/module/fiq_debugger/parameters/kgdb_enable 1
 
 on property:ro.bootmode=charger
     wait /dev/block/platform/11120000.ufs/by-name/EFS
@@ -1082,50 +1033,64 @@ on property:ro.bootmode=charger
     mkdir /efs/lpm 0775 system system
     class_start sec-charger
 
-# umount service
-service umount_service /system/bin/umount -D /preload
-    disabled
-    seclabel u:r:umount_service:s0
-    oneshot
-
-# sem_daemon
-service sem_daemon /system/bin/sem_daemon
-    class core
-    user system
-    group system nfc
-    disabled
-
 on property:sys.boot_completed=1
-    setprop security.semdaemonfinish 0
-    start sem_daemon
 
-on property:security.semdaemonfinish=1
-    stop sem_daemon
-
-# Support Preload install apks
-on property:persist.sys.storage_preload=1
-    mount ext4 /dev/block/platform/11120000.ufs/by-name/HIDDEN /preload nosuid nodev ro barrier=1
-    setprop storage.preload.complete 1
-
-on property:persist.sys.storage_preload=0
-    start umount_service
-
-# irisd
-    service irisd /system/bin/irisd
-    class late_start
-    user system
-    group system
-
-# faced
-    service faced /system/bin/faced
-    class late_start
-    user system
-    group system
-
-# SSWAP
-service swapon /sbin/sswap -s -f 2048
-    class core
-    user root
-    group root
-    seclabel u:r:sswap:s0
+service cass /system/bin/true
     oneshot
+    disabled
+
+service ExynosHWCServiceTW /system/bin/true
+    oneshot
+    disabled
+
+service ExynosHWCConfigs /system/bin/true
+    oneshot
+    disabled
+
+service proca /system/bin/true
+    oneshot
+    disabled
+
+service secure_storage /system/bin/true
+    oneshot
+    disabled
+
+service sec_wsm_service /system/bin/true
+    oneshot
+    disabled
+
+service vaultkeeper /system/bin/true
+    oneshot
+    disabled
+
+service vaultkeeper_hal /system/bin/true
+    oneshot
+    disabled
+
+service icccserv /system/bin/true
+    oneshot
+    disabled
+
+service timaserv /system/bin/true
+    oneshot
+    disabled
+
+service atnserv /system/bin/true
+    oneshot
+    disabled
+
+service ucmtlc-hal-service /system/bin/true
+    oneshot
+    disabled
+
+service snapserv /system/bin/true
+    oneshot
+    disabled
+
+service snap_utility_64 /system/bin/true
+    oneshot
+    disabled
+
+service snap_utility_32 /system/bin/true
+    oneshot
+    disabled
