@@ -10,6 +10,18 @@ ro.cmc.version=2.0
 ### System
 persist.sys.binary_xml=false
 
+# VSync
+debug.cpurend.vsync=false
+
+# IORap
+ro.iorapd.enable=true
+
+# Pre-Rendering
+ro.vendor.perf.scroll_opt=true
+
+# Zygote preforking
+persist.device_config.runtime_native.usap_pool_enabled=true
+
 # RIL
 persist.sys.fflag.override.settings_provider_model=false
 
