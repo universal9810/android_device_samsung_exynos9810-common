@@ -247,6 +247,12 @@ PRODUCT_COPY_FILES += \
 # Quick Tap
 TARGET_SUPPORTS_QUICK_TAP := false
 
+# RCS
+PRODUCT_PACKAGES += \
+    com.android.ims.rcsmanager \
+    PresencePolling \
+    RcsService
+
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.4.vendor:64 \
