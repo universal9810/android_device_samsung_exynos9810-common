@@ -989,6 +989,12 @@ on fs
     chmod 0660 /sys/class/dp_sec/dp_drm
     chown system system /sys/class/dp_sec/dp_drm
 
+# Copy DRM Key
+    copy /mnt/vendor/efs/wv.keys /factory/wv.keys  
+
+# Permission for DRM Key
+    chmod 0644 /factory/wv.keys
+
 # SVC LED
     chown system system /sys/class/sec/led/led_r
     chown system system /sys/class/sec/led/led_g
