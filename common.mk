@@ -250,6 +250,10 @@ PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    Remove_Packages
+
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.4.vendor:64 \
