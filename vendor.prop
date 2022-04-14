@@ -33,6 +33,11 @@ ro.config.avoid_gfx_accel=true
 ### VULKAN
 debug.hwui.renderer=skiavk
 
+### MEDIA
+debug.stagefright.ccodec=0
+debug.stagefright.omx_default_rank=0
+debug.stagefright.omx_default_rank.sw-audio=1
+
 ### KEYSTORE
 ro.hardware.keystore=mdfpp
 
