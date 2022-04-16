@@ -31,7 +31,7 @@ ro.hardware.vulkan=mali
 ro.config.avoid_gfx_accel=true
 
 ### VULKAN
-debug.hwui.renderer=skiavk
+### debug.hwui.renderer=skiavk
 
 ### MEDIA
 debug.stagefright.ccodec=0
