@@ -30,3 +30,6 @@ ro.charger.enable_suspend=true
 
 ### WIFI Direct
 wifi.direct.interface=p2p-dev-wlan0
+
+# Disable remote keyguard animation
+persist.wm.enable_remote_keyguard_animation=0
