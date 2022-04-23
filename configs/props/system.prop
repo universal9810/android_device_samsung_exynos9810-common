@@ -13,9 +13,6 @@ persist.sys.binary_xml=false
 # VSync
 debug.cpurend.vsync=false
 
-# IORap
-ro.iorapd.enable=true
-
 # Pre-Rendering
 ro.vendor.perf.scroll_opt=true
 
